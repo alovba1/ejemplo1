@@ -4,4 +4,4 @@ COPY package*.json ./
 
 RUN npm install
 EXPOSE 8081
-CMD ["node","index.html"]
+CMD ["node","/src/index.html"]

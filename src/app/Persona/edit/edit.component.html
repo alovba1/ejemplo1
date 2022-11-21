@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="card">
+     <div class="card-header">
+          <h3>Editar Personas</h3>
+     </div>
+     <div class="card-body">
+      <form (ngSubmit)="Editar()" novalidate #f="ngForm">
+          <div class="form-group">
+              <label for="">Id:</label>
+              <input type="text"  name ="id" class="form-control" [(ngModel)]=id required>
+      </div> 
+          <div class="form-group">
+       <label for="">Nombres:</label>
+       <input type="text"  name ="name" class="form-control" [(ngModel)]=name required>
+      </div> 
+       <div class="form-group">
+       <label for="">Apellidos:</label>
+       <input type="text"   name ="apellidos" class="form-control" [(ngModel)]=apellidos required>
+      </div>
+      <div class="form-group">
+        <label for="">documento:</label>
+        <input type="text"   name ="documento" class="form-control" [(ngModel)]=documento required>
+       </div>
+       <div class="form-group">
+        <label for="">correo:</label>
+        <input type="text"   name ="correo" class="form-control" [(ngModel)]=correo required>
+       </div>
+       <div class="form-group">
+        <label for="">genero:</label>
+        <input type="text"   name ="genero" class="form-control" [(ngModel)]=genero required>
+       </div>
+       <div class="form-group">
+        <label for="">edad:</label>
+        <input type="text"   name ="edad" class="form-control" [(ngModel)]=edad required>
+       </div>
+       <div class="form-group">
+        <label for="">pasatiempo:</label>
+        <input type="text"   name ="pasatiempo" class="form-control" [(ngModel)]=pasatiempo required>
+       </div>
+      <button (click)="Editar()" class="btn btn-info" style="margin:10px;">Editar</button>
+  </form>
+  </div>     
+  </div>
+  </div>
+

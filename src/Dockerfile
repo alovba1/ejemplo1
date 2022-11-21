@@ -1,4 +1,4 @@
-FROM 14-alpine3.15
+FROM 19-alpine3.15
 WORKDIR /ejemplo1
 COPY . .
 RUN   yarm install --production

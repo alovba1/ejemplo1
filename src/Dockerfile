@@ -1,7 +1,7 @@
 FROM node:10-alpine
-WORKDIR /ejemplo1
+WORKDIR /ejemplo1/src
 COPY package*.json ./
 
 RUN npm install
 EXPOSE 8081
-CMD ["node","src/index.html"]
+CMD ["node","index.html"]

@@ -12,12 +12,14 @@ export class ServiceService {
   
   
   Url='http://localhost:8080/persona';
+  CrearRegistro='MAPPING_SIGNATURE_INSERT';
+  ConsultarTodo='MAPPING_SIGNATURE_ALL_REGISTER';  
   getPersonas(){
-    return this.http.get<Persona[]>(this.Url);
+    return this.http.get<Persona[]>(this.Url+"/"+this.ConsultarTodo);
   }
   createPersona(persona:Persona)
   {
-    return this.http.post<Persona>(this.Url,persona);
+    return this.http.post<Persona>(this.Url+"/"+this.CrearRegistro,persona);
   }
   getPersonaId(id:number) {
     return this.http.get<Persona>(this.Url+"/"+id);

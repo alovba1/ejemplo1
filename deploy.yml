@@ -1,0 +1,20 @@
+#Primera Etapa
+FROM node:10-alpine as build-step
+
+RUN mkdir -p /app
+
+WORKDIR /ejemplo1
+
+COPY package.json /app
+
+RUN npm install
+
+COPY . /app
+
+RUN npm run build --prod
+
+#Segunda Etapa
+script:
+pip install awscli
+aws --version
+aws s3 cp --recursive . s3://$DEV_S3_BUCKET

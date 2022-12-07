@@ -18,6 +18,7 @@ export class AddComponent implements OnInit {
   genero="";
   edad="";
   pasatiempo="";
+  estatura="";
   constructor(private router:Router, private service:ServiceService) {}
 
   ngOnInit()  {
